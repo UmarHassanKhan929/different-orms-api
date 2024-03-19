@@ -1,2 +1,6 @@
 /api-with-drizzle/node_modules
 /api-with-prisma/node_modules
+/api-with-sequelize/node_modules
+/api-with-typeorm/node_modules
+/api-with-knex/node_modules
+/api-with-kysley/node_modules

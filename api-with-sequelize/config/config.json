@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "example",
+    "database": "sequelizedemo",
+    "host": "127.0.0.1",
+    "port": 6500,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "example",
+    "database": "sequelizedemo",
+    "host": "127.0.0.1",
+    "port": 6500,
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "example",
+    "database": "sequelizedemo",
+    "host": "127.0.0.1",
+    "port": 6500,
+    "dialect": "postgres"
+  }
+}

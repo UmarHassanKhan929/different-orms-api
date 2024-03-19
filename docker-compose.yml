@@ -1,0 +1,23 @@
+version: "3.3"
+name: backend-orms-test
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "6500:5432"
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: root
+      POSTGRES_DB: example_database
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:

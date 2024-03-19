@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1710830022104,
+      "tag": "0000_spotty_human_cannonball",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1710830910342,
+      "tag": "0001_mixed_black_panther",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1710831759998,
+      "tag": "0002_loving_lifeguard",
+      "breakpoints": true
+    }
+  ]
+}

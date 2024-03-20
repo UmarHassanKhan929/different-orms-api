@@ -3,7 +3,11 @@
 The repository contains APIs made using node, express, typescript and postgress alogn with different ORMs, giving a starting point to user to get started with API template of choice.
 The APIs have simple User and Posts models as DB tables, where user can have many posts and posts belongs to one user.
 
+For ORMs which donot have builtin db drivers, we are using `pg` for it.
+
 The ERD is attached below.
+
+![alt text](image.png)
 
 ## Tech Stack Required
 

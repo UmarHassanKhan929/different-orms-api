@@ -8,7 +8,7 @@ export async function createUser(
   try {
     const { name } = req.body;
 
-    const results = db("users").insert({ name });
+    const results = await db("users").insert({ name });
 
     if (!results) {
       return res.status(500).send({ message: "User could not be created." });
@@ -38,7 +38,7 @@ export async function getUserPosts(
         "posts.created_at as postCreatedAt"
       );
 
-    if (!user) {
+    if (!user || user.length === 0) {
       return res.status(404).send({ message: "User with that id not found" });
     }
 

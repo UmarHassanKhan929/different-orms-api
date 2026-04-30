@@ -1,7 +1,6 @@
 import { InferInsertModel, InferSelectModel, relations } from "drizzle-orm";
 import {
   pgTable,
-  integer,
   uuid,
   varchar,
   timestamp,
@@ -24,7 +23,7 @@ export const postsRelations = relations(postsModel, ({ one }) => ({
 }));
 
 export type Post = InferSelectModel<typeof postsModel>;
-export type NewPost = InferSelectModel<typeof postsModel>;
+export type NewPost = InferInsertModel<typeof postsModel>;
 export const insertPostSchema = createInsertSchema(postsModel);
 
 export const usersModel = pgTable("users", {

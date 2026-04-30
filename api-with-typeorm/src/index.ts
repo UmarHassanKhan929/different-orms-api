@@ -1,5 +1,4 @@
 import { AppDataSource } from "./data-source";
-import { User } from "./entity/User";
 
 import express, { Express, Request, Response } from "express";
 import cors from "cors";

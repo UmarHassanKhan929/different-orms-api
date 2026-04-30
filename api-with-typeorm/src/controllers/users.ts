@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { AppDataSource } from "../data-source";
 import { User } from "../entity/User";
-import { Post } from "../entity/Post";
 
 export async function createUser(
   req: Request,

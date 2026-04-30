@@ -1,0 +1,27 @@
+{
+  "name": "different-orms-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Same REST API built 5 ways -- Prisma, Drizzle, TypeORM, Knex, and Sequelize compared side-by-side",
+  "scripts": {
+    "prisma": "pnpm --filter api-with-prisma",
+    "drizzle": "pnpm --filter api-with-drizzle",
+    "typeorm": "pnpm --filter api-with-typeorm",
+    "knex": "pnpm --filter api-with-knex",
+    "sequelize": "pnpm --filter api-with-sequelize",
+    "install:all": "pnpm install --recursive",
+    "build:all": "pnpm --recursive run build"
+  },
+  "keywords": [
+    "typescript",
+    "express",
+    "postgresql",
+    "orm",
+    "prisma",
+    "drizzle",
+    "typeorm",
+    "knex",
+    "sequelize"
+  ],
+  "license": "MIT"
+}

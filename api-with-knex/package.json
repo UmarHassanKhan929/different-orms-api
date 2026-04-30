@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.ts",
+    "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
     "build": "npx tsc",
     "migration:generate": "npx knex migrate:make",
     "migrate": "npx knex migrate:latest",
-    "migration:undo": "npx knex migrate:rollback",
-    "studio": ""
+    "migration:undo": "npx knex migrate:rollback"
   },
   "dependencies": {
     "cors": "^2.8.5",

@@ -96,7 +96,7 @@ export async function deletePost(
   res: Response
 ): Promise<Response> {
   try {
-    const { id } = req.body;
+    const { id } = req.params;
 
     const deletedPosts = await db
       .delete(postsModel)

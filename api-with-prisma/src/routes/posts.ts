@@ -13,4 +13,4 @@ router.get("/", getPosts);
 router.get("/:id", getPost);
 router.post("/", createPost);
 router.patch("/:id", updatePost);
-router.delete("/", deletePost);
+router.delete("/:id", deletePost);

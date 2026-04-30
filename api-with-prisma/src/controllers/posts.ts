@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Posts, PrismaClient, PrismaPromise, Users } from "@prisma/client";
+import { Posts, PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -86,7 +86,7 @@ export async function deletePost(
   res: Response
 ): Promise<Response> {
   try {
-    const { id } = req.body;
+    const { id } = req.params;
 
     const deletedPosts = await prisma.posts.delete({
       where: { id },

@@ -7,7 +7,7 @@ export async function getPost(req: Request, res: Response): Promise<Response> {
 
     const post = await db.select().from("posts").where("id", id);
 
-    if (!post) {
+    if (!post || post.length === 0) {
       return res.status(404).send({ message: "Post with that id not found" });
     }
 
@@ -75,7 +75,7 @@ export async function deletePost(
   res: Response
 ): Promise<Response> {
   try {
-    const { id } = req.body;
+    const { id } = req.params;
 
     const deletedPosts = await db("posts").where("id", id).del();
 

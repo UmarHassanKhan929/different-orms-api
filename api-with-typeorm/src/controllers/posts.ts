@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { AppDataSource } from "../data-source";
-import { User } from "../entity/User";
 import { Post } from "../entity/Post";
 
 export async function getPost(req: Request, res: Response): Promise<Response> {
@@ -104,7 +103,7 @@ export async function deletePost(
   res: Response
 ): Promise<Response> {
   try {
-    const { id } = req.body;
+    const { id } = req.params;
 
     const postRepository = AppDataSource.getRepository(Post);
 

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Posts, PrismaClient, PrismaPromise, Users } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 

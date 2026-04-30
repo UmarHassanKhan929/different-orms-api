@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project:
+          - api-with-prisma
+          - api-with-drizzle
+          - api-with-typeorm
+          - api-with-knex
+          - api-with-sequelize
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+          cache-dependency-path: ${{ matrix.project }}/pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install
+        working-directory: ${{ matrix.project }}
+
+      - name: Build (TypeScript check)
+        run: pnpm build
+        working-directory: ${{ matrix.project }}

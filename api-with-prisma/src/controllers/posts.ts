@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Posts, PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -23,7 +23,7 @@ export async function getPost(req: Request, res: Response): Promise<Response> {
 }
 
 export async function getPosts(req: Request, res: Response): Promise<Response> {
-  const allPosts: Posts[] = await prisma.posts.findMany();
+  const allPosts = await prisma.posts.findMany();
 
   return res.send(allPosts);
 }

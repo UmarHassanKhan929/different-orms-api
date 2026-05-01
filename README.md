@@ -2,7 +2,7 @@
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Express](https://img.shields.io/badge/Express-4.18-000000?logo=express&logoColor=white)](https://expressjs.com/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-18-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
@@ -83,7 +83,9 @@ erDiagram
 docker compose up -d
 ```
 
-This starts PostgreSQL on port `6500` and Adminer (DB GUI) on port `8080`.
+This starts PostgreSQL 18 on port `6500` and Adminer (DB GUI) on port `8080`.
+
+If you still have a Docker volume from an older compose file that mounted PostgreSQL data at `/var/lib/postgresql/data`, remove it once so the container can initialize the layout expected by PostgreSQL 18: `docker compose down -v`, then `docker compose up -d` again (this deletes local DB data in that volume).
 
 ### 2. Pick an ORM and install
 
@@ -133,7 +135,7 @@ All implementations expose the same endpoints:
 - **Runtime:** Node.js
 - **Framework:** Express 4.18
 - **Language:** TypeScript 5.4
-- **Database:** PostgreSQL (via Docker)
+- **Database:** PostgreSQL 18 (via Docker)
 - **Package Manager:** pnpm
 - **DB Admin:** Adminer (included in Docker Compose)
 

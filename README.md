@@ -6,7 +6,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-> The same REST API built 5 different ways -- comparing **Prisma**, **Drizzle**, **TypeORM**, **Knex**, and **Sequelize** side-by-side with Express + TypeScript + PostgreSQL.
+> The same REST API built 5 different ways. Comparing **Prisma**, **Drizzle**, **TypeORM**, **Knex**, and **Sequelize** side-by-side with Express + TypeScript + PostgreSQL.
 
 Each implementation exposes identical endpoints with the same `Users` and `Posts` data model, so you can directly compare how each ORM handles schema definition, migrations, queries, and relations.
 
